@@ -83,3 +83,14 @@ var mot = myArray42.join('') + " La grande réponse sur la vie, l’univers et l
 
 console.log(mot);
 
+/**
+* Exercice 9
+*/
+
+function getRandomArbitrary(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+} 
+
+var rand = getRandomArbitrary(1, 42);
+console.log(rand)
+
