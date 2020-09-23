@@ -94,3 +94,31 @@ function getRandomArbitrary(min, max) {
 var rand = getRandomArbitrary(1, 42);
 console.log(rand)
 
+/**
+* Exercice 10
+*/
+
+
+
+
+
+/**
+* Exercice 11
+*/
+
+var compute42 = 2 * 21;
+var toString = compute42.toString();
+console.log(toString);
+
+
+/**
+* Exercice 12
+*/
+
+var num = 42424242;
+
+
+/**
+* Exercice 13
+*/
+
