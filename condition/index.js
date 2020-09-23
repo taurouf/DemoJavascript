@@ -89,5 +89,11 @@ if (age == null || age == "") {
 }
 
 
+/**
+* Exercice 5
+*/
+
+// ce n'est pas possible car le return n'est possible seulement dans une fonction
+
 
 
