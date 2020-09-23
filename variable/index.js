@@ -40,3 +40,12 @@ var test2;
 var test = null;
 
 console.log(string, number, float, boolean,array,date,objet,test2,test)
+
+/**
+* Exercice 4
+*/
+
+var my42Count = 'quarante-deux';
+var taille = my42Count.length
+
+console.log(taille);
