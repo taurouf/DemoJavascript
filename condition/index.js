@@ -42,28 +42,52 @@ if (rand >= 0 && rand <=10) {
 }
 
 /**
-* Exercice 2
+* Exercice 3
 */
 
 switch (new Date().getDay()) {
   case 0:
-    day = "Sunday";
+    day = "Nous somme Dimanche";
     break;
   case 1:
-    day = "Monday";
+    day = "Nous somme Lundi";
     break;
   case 2:
-     day = "Tuesday";
+     day = "Nous somme Mardi";
     break;
   case 3:
-    day = "Wednesday";
+    day = "Nous somme Mercredi";
     break;
   case 4:
-    day = "Thursday";
+    day = "Nous somme Jeudi";
     break;
   case 5:
-    day = "Friday";
+    day = "Nous somme Vendredi";
     break;
   case 6:
-    day = "Saturday";
+    day = "Nous somme Samedi";
 }
+
+console.log('nous sommes' + switch)
+
+/**
+* Exercice 4
+*/
+
+var txt= prompt('Merci de saisir un chiffre entre 1 et 3')
+
+if (age == null || age == "") {
+    txt = alert('Merci de saisir un chiffre entre 1 et 3');
+    
+} else if (txt == 1) {
+    txt = alert('C/est la fin de l/histoire 1');
+    
+}else if (txt == 2) {
+    txt = alert('C/est la fin de l/histoire 2');
+}else if(txt == 3){
+  txt = alert('La grande réponse sur la vie, l’univers et le reste !');
+}
+
+
+
+
