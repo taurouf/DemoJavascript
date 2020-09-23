@@ -22,6 +22,7 @@ if(age == null || age == ""){
     txt = 'Vous ne pouvez pas entrez vous n’êtes pas majeur vous avez' + age;
 }
 
+
 /**
 * Exercice 2
 */
