@@ -73,3 +73,13 @@ var myArray42 = ['q','u','a','r','a','n','t','e','-','d','e','u','x'];
 var myArray42Len = myArray42.length;
 
 console.log(myArray42Len);
+
+
+/**
+* Exercice 8
+*/
+
+var mot = myArray42.join('') + " La grande réponse sur la vie, l’univers et le reste !"
+
+console.log(mot);
+
