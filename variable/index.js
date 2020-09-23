@@ -63,3 +63,13 @@ console.log(taille);
 */
 
 var myArray42 = ['q','u','a','r','a','n','t','e','-','d','e','u','x'];
+
+/**
+* Exercice 7
+*/
+
+
+
+var myArray42Len = myArray42.length;
+
+console.log(myArray42Len);
