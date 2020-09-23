@@ -49,3 +49,17 @@ var my42Count = 'quarante-deux';
 var taille = my42Count.length
 
 console.log(taille);
+
+
+/**
+* Exercice 5
+*/
+
+//var unknow = unknow => || 42;
+
+
+/**
+* Exercice 6
+*/
+
+var myArray42 = ['q','u','a','r','a','n','t','e','-','d','e','u','x'];
