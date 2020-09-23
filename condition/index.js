@@ -95,5 +95,11 @@ if (age == null || age == "") {
 
 // ce n'est pas possible car le return n'est possible seulement dans une fonction
 
+/**
+* Exercice 6
+*/
+
+existed ? alert(42):alert('cette variable n\existe pas');
+
 
 
