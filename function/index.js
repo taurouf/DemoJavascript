@@ -24,8 +24,8 @@
 
 /**
      * Create a computeSurfaceM2.
-     * @param {number} height - The txt value.
-     * @param {number} width - The txt value.
+     * @param {number} height - The height value.
+     * @param {number} width - The width value.
      */
 
 // function computeSurfaceM2(width, height){
@@ -120,6 +120,27 @@ document.querySelector('#heure').textContent = date.getHours() + ':' + date.getM
 
 }
 
+/**
+* Exercice 6
+*/
+
+
+/**
+     * Create a fibonacci.
+     * @param {number} nbr - The nbr value
+     */
+
+
+
+function fibonacci(nbr) {
+  if(nbr < 2){
+    return nbr;
+  }
+
+  return fibonacci(nbr - 1) + fibonacci(nbr - 2);
+}
+
+console.log(fibonacci(8));
 
 
 
