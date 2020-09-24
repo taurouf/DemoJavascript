@@ -13,3 +13,21 @@ for (var i = 0; i < array.length; i++) {
     }
     result += '\n'
 }
+
+/**
+* Exercice 2
+*/
+
+var ul=document.createElement('ul');
+for (var i = 1; i <= 10; i++) {
+  var li = document.createElement('li')
+  li.textContent= i + ' x 5 = ' + (i*5);
+  ul.appendChild(li)
+}
+document.body.appendChild(ul);
+
+
+/**
+* Exercice 3
+*/
+
