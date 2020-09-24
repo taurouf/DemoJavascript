@@ -31,3 +31,11 @@ document.body.appendChild(ul);
 * Exercice 3
 */
 
+var plop = 0;
+while (true) {
+      plop ++
+      console.log(5*plop)
+      if (plop == 10) {
+        break
+      } 
+}
