@@ -5,7 +5,7 @@
 */
 
 var txt;
-var age = prompt('Merci de rentrer un age');
+var age = parseInt(prompt('Merci de rentrer un age'));
 
 if(age == null || age == ""){
   txt = 'Merci de rentrer un age dans le prompt';
@@ -16,7 +16,7 @@ if(age == null || age == ""){
 
     
 }else if(age >= 42){
-    txt = 'vous êtes le patron de la boite'
+    txt = 'vous êtes le patron de la boite' + age
 
 }else if(age <= 18){
     txt = 'Vous ne pouvez pas entrez vous n’êtes pas majeur vous avez' + age;
@@ -99,7 +99,46 @@ if (age == null || age == "") {
 * Exercice 6
 */
 
-existed ? alert(42):alert('cette variable n\existe pas');
+existed ? alert(42):alert('cette variable n\'existe pas');
+
+/**
+* Exercice 7
+*/
+
+
+var familyNumber = (Number(prompt("Entrez un nombre :"))).toString().split('')
+
+switch (familyNumber.length) {
+  case 1:
+    alert(`${familyNumber.join("")} appartient à la famille des 0`)
+    break;
+  case 2:
+    switch (Number(familyNumber[0])) {
+      case 1:
+        alert(`${familyNumber.join('')} appartient à la famille des 10`)
+        break;
+      case 2:
+        alert(`${familyNumber.join('')} appartient à la famille des 20`)
+        break;
+      case 3:
+        alert(`${familyNumber.join('')} appartient à la famille des 30`)
+        break;
+      case 4:
+        alert(`${familyNumber.join('')} appartient à la famille des 40`)
+        break;
+      default:
+        alert("Ce nombre contient bien 2 chiffres mais est supérieur à 50 !")
+        break;
+    }
+    break;
+  default:
+    alert("Ceci n'est pas un nombre ou un nombre au dessus de 100")
+    break;
+}
+
+
+
+
 
 
 
