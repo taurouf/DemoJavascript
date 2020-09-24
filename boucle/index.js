@@ -53,3 +53,30 @@ console.log(table)
 /**
 * Exercice 5
 */
+
+var obj{
+  name: 42;
+  age:42;
+}
+var compute = 1;
+for (var keyn obj) {
+  compute *= obj[key];
+}
+console.log(compute)
+
+/**
+* Exercice 6
+*/
+
+var nbr = [45, 86, 1, 4, -9];
+for (var i = 0; i < nbr.length; i++) {
+    for (var j = 0; j < nbr.length; j++) {
+        if (nbr[i] < nbr[j]) {
+            var tmp = nbr[i];
+            nbr[i] = nbr[j];
+            nbr[j] = tmp;
+            j = 0;
+        }
+    }
+}
+console.log(nbr);
