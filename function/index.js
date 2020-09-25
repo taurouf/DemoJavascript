@@ -5,41 +5,42 @@
 */
 
 /**
-     * Create a myPutStr.
-     * @param {number, string} txt - The txt value.
-     */
-
-// function myPutStr(txt){
-//     if(txt = !isNaN(txt)){
-//         return "bravo c'est un chiffre"
-//     }
-//     return "ta perdu"
-//   }
-
-// myPutStr('d')
+ * myPutStr
+ * @param {number || string} str
+ * @return {String} toString
+ */
+function myPutStr(str) {
+    if (typeof str !== "string") {
+        return "Et pourquoi pas 42 ?";
+    }
+    return str;
+}
+console.log(myPutStr('15'));
+console.log(myPutStr(15));
 
 /**
 * Exercice 2
 */
 
 /**
-     * Create a computeSurfaceM2.
-     * @param {number} height - The height value.
+     * Create a compute Surface M2.
+     * @param {number} length - The height value.
      * @param {number} width - The width value.
+     * @return {number} totalM2
      */
 
-// function computeSurfaceM2(width, height){
-//   if (typeof value === "string") {
-//     return 'merci de mettre un chiffre'
+function computeSurfaceM2(length, height){
+  if ((typeof length !== "number") || (height !== "number")) {
+    return new Error('merci de mettre un chiffre');
 
 
-//   }
+  }
 
-//   return width*height;
+  return length * width;
 
 
-// }
-// computeSurfaceM2(rectange)
+};
+computeSurfaceM2(rectange)
 
 /**
 * Exercice 3
@@ -49,51 +50,66 @@
      * Create a createMyButton.
      */
 
-// function createMyButton() {
-//   var btn = document.createElement('button');
-//   btn.textContent = 'Appyer sur ok'
-//   document.body.appendChild(btn)
-//   return btn
-// }
+function createMyButton() {
+  var btn = document.createElement('button');
+  btn.textContent = 'Appuyer sur ok'
+  document.body.appendChild(btn)
+  return btn
+}
 
 /**
      * Create a detectMyAgeByNight.
      */
 
 
-// function detectMyAgeByNight() {
+function detectMyAgeByNight() {
 
-// var age = parseInt(prompt('Merci de rentrer un age'));
+var age = parseInt(prompt('Merci de rentrer un age'));
 
-// if(age == null || age == ""){
-//   return alert('Merci de rentrer un age dans le prompt')
+if(age == null || age == ""){
+  return alert('Merci de rentrer un age dans le prompt')
 
 
-// }if (age >=18 && age <=42){
-//     return alert('Vous pouvez entrer vous êtes majeur vous avez ' + age + ' ans')
+}if (age >=18 && age <=42){
+    return alert('Vous pouvez entrer vous êtes majeur vous avez ' + age + ' ans')
 
     
-// }if(age >= 42){
-//     return alert('vous êtes le patron de la boite vous avez ' + age + ' ans') 
+}if(age >= 42){
+    return alert('vous êtes le patron de la boite vous avez ' + age + ' ans') 
 
-// }if(age <= 18){
-//     return alert('Vous ne pouvez pas entrez vous n’êtes pas majeur vous avez ' + age + ' ans') 
-// }
-// alert("Merci de rentrer un chiffre")
-//   return detectMyAgeByNigth()
+}if(age <= 18){
+    return alert('Vous ne pouvez pas entrez vous n’êtes pas majeur vous avez ' + age + ' ans') 
+}
+alert("Merci de rentrer un chiffre")
+  return detectMyAgeByNigth()
 
-// }
+}
 
-// var button = createMyButton()
-// button.addEventListener('click', () => detectMyAgeByNight())
+var button = createMyButton()
+button.addEventListener('click', () => detectMyAgeByNight())
 
 /**
 * Exercice 4
 */
 
-// function matrixGenerator(){
+function matrixGenerator(array){
+    var matrix = document.createElement("table");
+    for (var i=0;i<array.length;i++){
+        var tr = document.createElement("tr");
+        for(var j=0;j<array[i].length;j++){
+          var td = document.createElement("td");
+          td.insertAdjacentHTML("beforeend","<span>"+array[i][j]+"</span>");
+          tr.appendChild(td);
+        }
+        matrix.appendChild(tr);
+    }
+    document.querySelector("body").appendChild(matrix);
+}
+matrixGenerator(
+[[1, 1, 1, 1, 1], [0, 1, 0, 1, 0], [1, 0, 0, 1, 1]]
+);
 
-// }
+
 
 /**
 * Exercice 5
@@ -130,17 +146,47 @@ document.querySelector('#heure').textContent = date.getHours() + ':' + date.getM
      * @param {number} nbr - The nbr value
      */
 
-
-
-function fibonacci(nbr) {
-  if(nbr < 2){
-    return nbr;
-  }
-
-  return fibonacci(nbr - 1) + fibonacci(nbr - 2);
+var arrayFibonacci = [1];
+var newArrayFibonacci = [];
+var i = 0;
+function computeFibonacci(arrayFibonacci) {
+    i++;
+    if (arrayFibonacci.length == 1) {
+        arrayFibonacci[i] = 1;
+        computeFibonacci(arrayFibonacci);
+    }
+    if (i < 10) {
+       arrayFibonacci[i] = arrayFibonacci[i-1]+arrayFibonacci[i-2];
+       computeFibonacci(arrayFibonacci);
+    }
 }
-
-console.log(fibonacci(8));
+function saveFibonacci() {
+    newArrayFibonacci = arrayFibonacci;
+}
+function sortFibonacci(newArrayFibonacci) {
+    for (var i = 0; i < newArrayFibonacci.length; i++){
+        for (var j = 0, stop = newArrayFibonacci.length-i; j < stop; j++){
+            if (newArrayFibonacci[j] > newArrayFibonacci[j+1]){
+                var temp = newArrayFibonacci[j];
+                newArrayFibonacci[j] = items[j+1];
+                newArrayFibonacci[j+1] = temp;
+            }
+        }
+    }
+    return newArrayFibonacci;
+}
+function totalFibonacci(arrayFibonacci) {
+    var total = 0;
+    for (i = 0; i < arrayFibonacci.length; i++) {
+        total += arrayFibonacci[i];
+    }
+    return total;
+}
+computeFibonacci(arrayFibonacci);
+console.log(arrayFibonacci);
+saveFibonacci(arrayFibonacci,newArrayFibonacci);
+sortFibonacci(newArrayFibonacci);
+console.log(totalFibonacci(arrayFibonacci));
 
 
 
